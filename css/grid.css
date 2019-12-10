@@ -27,6 +27,15 @@ footer {
 
 .products {
     display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(22em, 1fr));
+    grid-template-rows: repeat(5, 1fr);
+    grid-gap: 5px;
+    height: auto;
+    margin-top: 0.5vw;
+}
+
+/*.products {
+    display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: repeat(12, 1fr);
     grid-gap: 0.5vw;
@@ -72,7 +81,7 @@ footer {
 #product8 {
     grid-column: 10/-1;
     grid-row: 6/-1;
-}
+} */
 
 .productinfo {
     display: grid;

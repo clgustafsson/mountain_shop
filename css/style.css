@@ -15,8 +15,8 @@ img {
 
 img:hover {
   background-color: white;
-  transform: scale(1.05, 1.05);
-  transition: transform 0.1s;
+  transform: scale(1.027, 1.027);
+  transition: transform 0.01s;
   z-index: 10;
 }
 
@@ -105,6 +105,12 @@ button {
 button:hover {
   background-color: #0fbcf9;
   color: #1e272e;
+}
+
+@media screen and (max-width: 786px) {
+  li {
+    width: 100%;
+  }
 }
 
 /*

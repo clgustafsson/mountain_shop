@@ -1,80 +1,112 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway:300,400,600&display=swap');
+
 .productimage {
-    width: 100%;
+  width: 100%;
 }
+
+.productinfo {
+  display: none !important;
+}
+
+img {
+  background-color: #ecf0f1;
+  height: 100%;
+}
+
+img:hover {
+  background-color: white;
+  transform: scale(1.05, 1.05);
+  transition: transform 0.1s;
+  z-index: 10;
+}
+
 .productsitem {
-    width: 100%;
+  width: 100%;
 }
+
 body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Raleway', sans-serif;
-    font-weight: 400;
+  margin: 0;
+  padding: 0;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  background-color: white;
 }
+
 nav {
-    z-index: 1;
-    opacity: 75%;
+  z-index: 1;
+  opacity: 75%;
 }
+
 footer {
-    background-color: #333;
-    opacity: 75%;
-    color: white;
+  background-color: #333;
+  opacity: 75%;
+
+  color: white;
 }
-header > img {
-    width: 100%;
-    height: 100%;
+
+header>img {
+  width: 100%;
+  height: 100%;
 }
+
 #popupviewproduct {
-      position: absolute;
-      top:5vh;
-      width: 70vw;
-      background-color: red;
-      display: none;
+  position: absolute;
+  top: 5vh;
+  width: 70vw;
+  background-color: red;
+  display: none;
 }
+
 ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #333;
-  }
-  
-  li {
-    float: left;
-  }
-  #shoppingbag {
-      float: right!important;
-  }
-  
-  li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 0.5em 4em;
-    text-decoration: none;
-  }
-  li a:hover {
-    background-color: #111;
-  }
-  .products > div {
-     float: left;
-  }
-  button {
-    background-color:#ecf0f1;
-    color: #2c3e50;
-    padding: 3px 3px;
-    text-align: center;
-    text-decoration: none;
-    font-weight: 600;
-    border: none;
-    border-radius: 0.1em;
-    z-index: 5;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+#shoppingbag {
+  float: right !important;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 0.5em 4em;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+}
+
+.products>div {
+  float: left;
+}
+
+button {
+  background-color: #ecf0f1;
+  color: #2c3e50;
+  padding: 3px 3px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: 600;
+  border: none;
+  border-radius: 0.1em;
+  z-index: 5;
 
 }
+
 button:hover {
-    background-color: #0fbcf9;
-    color: #1e272e;
+  background-color: #0fbcf9;
+  color: #1e272e;
 }
+
 /*
 transform: scale(1,2);
 transition: transform .5s;

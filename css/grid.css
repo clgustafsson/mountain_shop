@@ -1,3 +1,4 @@
+/*Page*/
 .container {
     display: grid;
     grid-template-columns: repeat(10, 1fr);
@@ -25,105 +26,48 @@ footer {
     grid-row: 7/13;
 }
 
+/*Products grid*/
 .products {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(22em, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
     grid-template-rows: repeat(5, 1fr);
-    grid-gap: 5px;
-    height: auto;
+    grid-gap: 0.5vh;
+    height: 100vh;
     margin-top: 0.5vw;
 }
 
-/*.products {
+.productsitem {
     display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: repeat(12, 1fr);
-    grid-gap: 0.5vw;
-    height: auto;
-    margin-top: 0.5vw;
 }
 
-#product1 {
-    grid-column: 1/4;
-    grid-row: 1/6;
-}
-
-#product2 {
-    grid-column: 4/7;
-    grid-row: 1/6;
-}
-
-#product3 {
-    grid-column: 7/10;
-    grid-row: 1/6;
-}
-
-#product4 {
-    grid-column: 10/-1;
-    grid-row: 1/6;
-}
-
-#product5 {
-    grid-column: 1/4;
-    grid-row: 6/-1;
-}
-
-#product6 {
-    grid-column: 4/7;
-    grid-row: 6/-1;
-}
-
-#product7 {
-    grid-column: 7/10;
-    grid-row: 6/-1;
-}
-
-#product8 {
-    grid-column: 10/-1;
-    grid-row: 6/-1;
-} */
-
-.productinfo {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: repeat(12, auto);
-    grid-gap: 0.4vw;
-    height: auto;
-}
-
-.gotoproduct {
-    grid-column: 1/6;
-    grid-row: 1/-1;
-}
-
-.addtobag {
-    grid-column: 6/-1;
-    grid-row: 1/-1;
-}
-
+/*Popup grid*/
 #popupviewproduct {
-
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: repeat(12, auto);
-    grid-gap: 0.4vw;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, auto);
     height: auto;
 }
 
-.productimage {
-    grid-column: 4/-4;
-    grid-row: 2/7;
+#productname {
+    grid-column: 1/-1;
+    grid-row: 1;
+}
+
+#productprice {
+    grid-column: 1/-1;
+    grid-row: 2;
 }
 
 .popupgotoproduct {
-    grid-column: 2/6;
-    grid-row: -4/-1;
+    grid-column: 1;
+    grid-row: 3;
 }
 
 .popupaddtobag {
-    grid-column: -6/-2;
-    grid-row: -4/-1;
+    grid-column: 2;
+    grid-row: 3;
 }
 
+/*Media query*/
 @media screen and (max-width: 600px) {
     nav {
         grid-column: 1/-1;

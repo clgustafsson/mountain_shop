@@ -1,60 +1,11 @@
+/*Fonts*/
 @import url('https://fonts.googleapis.com/css?family=Raleway:300,400,600&display=swap');
 
-.productimage {
-  width: 100%;
-}
 
-.productinfo {
-  display: none !important;
-}
-
-img {
-  background-color: #ecf0f1;
-  height: 100%;
-}
-
-img:hover {
-  background-color: white;
-  transform: scale(1.027, 1.027);
-  transition: transform 0.01s;
-  z-index: 10;
-}
-
-.productsitem {
-  width: 100%;
-}
-
-body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Raleway', sans-serif;
-  font-weight: 400;
-  background-color: white;
-}
-
+/*Nav*/
 nav {
   z-index: 1;
   opacity: 75%;
-}
-
-footer {
-  background-color: #333;
-  opacity: 75%;
-
-  color: white;
-}
-
-header>img {
-  width: 100%;
-  height: 100%;
-}
-
-#popupviewproduct {
-  position: absolute;
-  top: 5vh;
-  width: 70vw;
-  background-color: red;
-  display: none;
 }
 
 ul {
@@ -62,15 +13,11 @@ ul {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #333;
+  background-color: #131f34;
 }
 
 li {
   float: left;
-}
-
-#shoppingbag {
-  float: right !important;
 }
 
 li a {
@@ -81,12 +28,122 @@ li a {
   text-decoration: none;
 }
 
+#shoppingbag {
+  float: right !important;
+}
+
 li a:hover {
   background-color: #111;
 }
 
+/*Header*/
+header>img {
+  width: 100%;
+  height: 100%;
+}
+
+/*Section*/
+
+/*Product container*/
+.products {
+  padding: 0 0.5vw 0 0.5vw;
+}
+
 .products>div {
   float: left;
+}
+
+/*Products*/
+.products div:hover {
+  transition: transform 0.01s;
+}
+
+.products #popupviewproduct {
+  transform: none;
+}
+
+.productimage {
+  height: auto;
+  width: 100%;
+  background-color: #34495e;
+  -webkit-transition: background-color 1500ms linear;
+  -ms-transition: background-color 1500ms linear;
+  transition: background-color 1500ms linear;
+}
+
+.productimage:hover {
+
+  border: none;
+  z-index: 10;
+  background-color: #e74c3c;
+  border-color: #2c3e50;
+  -webkit-transition: background-color 1500ms linear;
+  -ms-transition: background-color 1500ms linear;
+  transition: background-color 1500ms linear;
+}
+
+.productsitem {
+  position: relative;
+}
+
+.productsitem:hover {
+  z-index: 25;
+}
+
+
+
+/*Products Popup*/
+#popupviewproduct {
+  width: 100%;
+  background-color: #131f34;
+  display: none;
+  z-index: 20;
+  margin-bottom: 5px;
+}
+
+#popupviewproduct button {
+  text-decoration: underline;
+  background-color: transparent;
+  color: white;
+}
+
+#popupviewproduct button:hover {
+  color: #3498db;
+}
+
+
+#productname {
+  font-weight: 400;
+}
+
+#productprice {
+  font-style: italic;
+  font-weight: 300;
+}
+
+#popupviewproduct h3 {
+  text-align: center;
+  color: white;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+/*Footer*/
+
+footer {
+  background-color: #333;
+  opacity: 75%;
+
+  color: white;
+}
+
+/*General*/
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  background-color: white;
 }
 
 button {
@@ -107,12 +164,15 @@ button:hover {
   color: #1e272e;
 }
 
-@media screen and (max-width: 786px) {
+/*Media query*/
+@media screen and (max-width: 787px) {
   li {
     width: 100%;
   }
 }
 
-/*
-transform: scale(1,2);
-transition: transform .5s;
+@media (max-aspect-ratio: 3/2) {
+  li {
+    width: 100%;
+  }
+}

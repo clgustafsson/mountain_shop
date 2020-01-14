@@ -1,0 +1,146 @@
+/*Fonts*/
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,600&display=swap');
+
+
+/*Nav*/
+nav {
+  z-index: 1;
+  opacity: 75%;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #131f34;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 0.5em 4em;
+  text-decoration: none;
+}
+
+#shoppingbag {
+  float: right !important;
+}
+
+li a:hover {
+  background-color: #111;
+}
+
+/*Section*/
+
+/*Product container*/
+.products {
+  padding: 0 0.5vw 0 0.5vw;
+}
+
+.products>div {
+  float: left;
+}
+
+/*Products*/
+.products div:hover {
+  transition: transform 0.01s;
+}
+
+.products #popupviewproduct {
+  transform: none;
+}
+
+.column {
+  float: left;
+  width: 40%;
+  margin-left: 4vw;
+}
+
+.productimage {
+  height: auto;
+
+  float: left;
+  width: 25%;
+  background-color: #34495e;
+  -webkit-transition: background-color 1500ms linear;
+  -ms-transition: background-color 1500ms linear;
+  transition: background-color 1500ms linear;
+}
+
+.productimage:hover {
+
+  border: none;
+  z-index: 10;
+  background-color: #e74c3c;
+  border-color: #2c3e50;
+  -webkit-transition: background-color 1500ms linear;
+  -ms-transition: background-color 1500ms linear;
+  transition: background-color 1500ms linear;
+}
+
+.productsitem {
+  position: relative;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 4vh;
+}
+
+.productsitem:hover {
+  z-index: 25;
+}
+
+/*Footer*/
+
+footer {
+  background-color: #333;
+  opacity: 75%;
+
+  color: white;
+}
+
+/*General*/
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  background-color: white;
+}
+
+button {
+  background-color: #51e473;
+  color: #2c3e50;
+  padding: 3px 3px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: 600;
+  border: none;
+  border-radius: 0.1em;
+  z-index: 5;
+
+}
+
+button:hover {
+  background-color: #159d19;
+  color: #1e272e;
+}
+
+/*Media query*/
+@media screen and (max-width: 787px) {
+  li {
+    width: 100%;
+  }
+}
+
+@media (max-aspect-ratio: 3/2) {
+  li {
+    width: 100%;
+  }
+}

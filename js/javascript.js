@@ -10,7 +10,7 @@ function mouseover(x) {
 }
 
 async function popup(elem) {
-
+    //await sleep(1);
     const buyItem = document.getElementById("popupviewproduct");
     elem.style.transform = "scale(1.027, 1.027)"
     //elem.style.width = elem.clientWidth.toString() + "px";
@@ -21,7 +21,7 @@ async function popup(elem) {
 }
 
 async function hidepopup(elem) {
-
+    //await sleep(1);
     if (mouse == false) {
         const buyItem = document.getElementById("popupviewproduct");
         elem.style.width = "100%";

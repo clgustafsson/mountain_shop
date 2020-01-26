@@ -1,48 +1,79 @@
-//window.onload = initDivMouseOver;
-var mouse = false;
+var myBag = JSON.parse(sessionStorage.myBag);
 
-function sleep(ms) {
-    return new Promise(resolve => setTimeout(resolve, ms));
-}
-
-function mouseover(x) {
-    mouse = x;
-}
-
-async function popup(elem) {
-    //await sleep(1);
-    const buyItem = document.getElementById("popupviewproduct");
-    elem.style.transform = "scale(1.027, 1.027)"
-    //elem.style.width = elem.clientWidth.toString() + "px";
-    buyItem.style.position = "absolute";
-    buyItem.style.display = "grid";
-    elem.append(buyItem);
-    buyItem.style.bottom = "-" + buyItem.clientHeight.toString() + "px";
-}
-
-async function hidepopup(elem) {
-    //await sleep(1);
-    if (mouse == false) {
-        const buyItem = document.getElementById("popupviewproduct");
-        elem.style.width = "100%";
-        buyItem.style.display = "none";
-        buyItem.style.position = "static";
-        elem.style.transform = "initial";
+var items = [{ //name: has to be unique. //product image -> css/"name:".webp
+        price: 20,
+        name: "Product1",
+        sale: false,
+        oldprice: 0,
+        saletag: ""
+    },
+    {
+        price: 50,
+        name: "Product2",
+        sale: false,
+        oldprice: 0,
+        saletag: "Limited offer"
+    },
+    {
+        price: 70,
+        name: "Product3",
+        sale: false,
+        oldprice: 0,
+        saletag: ""
+    },
+    {
+        price: 100,
+        name: "Product4",
+        sale: true,
+        oldprice: 200,
+        saletag: "50% off"
     }
+
+];
+
+function addtobag(target, productprice) {
+    var found = false;
+    myBag.forEach(function (item) {
+        if (item[0] == target) {
+            item[1]++;
+            item[3] = parseInt(item[1]) * parseInt(productprice);
+            found = true;
+        }
+    });
+    if (!found) {
+        myBag.push([target, 1, productprice, productprice]);
+    }
+    sessionStorage.myBag = JSON.stringify(myBag);
 }
 
-//async function hidepopup(elem) {
-//    elem.style.transform = "initial";
-//    await sleep(10);
-//    if (mouse == false) {
-//        const buyItem = document.getElementById("popupviewproduct");
-//        parentDiv = document.getElementById("home");
-//        elem.style.width = "100%";
-//        buyItem.style.display = "none";
-//        parentDiv.appendChild(buyItem);
-//    }
-//}
-
-function gotoproduct() {
+function viewproduct(name, price, image, sale, oldprice) {
     window.open("index2.html", "_self");
+    sessionStorage.name = name;
+    sessionStorage.price = price;
+    sessionStorage.image = image;
+    sessionStorage.sale = sale;
+    sessionStorage.oldprice = oldprice;
+    sessionStorage.myBag = JSON.stringify(myBag);
 }
+
+function showinfo(x) {
+    document.getElementById("productinfo" + x).style.display = "grid";
+}
+
+function hideinfo(x) {
+    document.getElementById("productinfo" + x).style.display = "none";
+}
+
+function loadpage() {
+    template = document.getElementById("product-template").innerHTML;
+    renderer = Handlebars.compile(template)
+    items.forEach(function (item, index) {
+        var product = document.createElement("div");
+        html = renderer(item)
+        product.innerHTML = html;
+        document.getElementById("products").appendChild(product);
+        document.getElementById("enablejavascript").style.display = "none";
+    });
+}
+
+window.addEventListener("load", loadpage);

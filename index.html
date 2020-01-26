@@ -2,72 +2,54 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Shop</title>
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/grid.css">
-  <script src="js/javascript.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="Description"
+        content="The brand new collection of mountains is best in class! Buy your dream mountain here!">
+    <title>Products</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body id="home">
-  <div id="popupviewproduct" onmouseover="mouseover(true)" onmouseout="mouseover(false), hidepopup">
-    <h3 id="productname">Product Name</h3>
-    <h3 id="productprice">Price:0</h3>
-    <button class="popupgotoproduct" type="button" onclick="gotoproduct()">View</button>
-    <button class="popupaddtobag" type="button" onclick="addtobag()">Add to bag</button>
-  </div>
-  <div class="container">
+<body">
     <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="index.html">Free shipping</a></li>
-        <li id="FAQ"><a href="">FAQ</a></li>
-        <li id="shoppingbag"><a href="">Shoppingbag</a></li>
-      </ul>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html">Free shipping</a></li>
+            <li id="FAQ"><a href="">FAQ</a></li>
+            <li id="shoppingbag"><a href="index3.html">Shoppingbag</a></li>
+        </ul>
     </nav>
     <header>
-      <div>
         <img src="img/mountain.webp" alt="mountain">
-        <div class="center">
-          <h1>Website name</h1>
-        </div>
-      </div>
+        <h1>Website name</h1>
     </header>
-    <section>
-      <div class="products">
-        <div id="product1" onmouseover="popup(this)" onmouseout="hidepopup(this)" class="productsitem">
-          <img id="test" src="img/mountainproduct1(1).webp" alt="mountain" class="productimage">
+    <section class="products" id="products"></section>
+    <p id="enablejavascript">Please enable javascript</p>
+    <footer id="mainpagefooter">
+        <ul>
+            <li><a href="">Contact</a></li>
+            <li><a href="">About</a></li>
+        </ul>
+    </footer>
+    </body>
+    <script id="product-template" type="text/x-handlebars-template">
+        <div id="{{name}}" class="product" onmouseover="showinfo('{{name}}')" onmouseout="hideinfo('{{name}}')">
+            <img src="img/{{name}}.webp" alt="{{name}}image">
+            <h3 class="saletag nosaletag{{saletag}}">{{saletag}}</h3>
+            <div id="productinfo{{name}}" class="productinfo">
+            <h4 class="productname">{{name}}</h4>
+            {{#if sale}}
+            <h4 class="salepricetag">Now:{{price}} Was:{{oldprice}}</h4>
+            {{else}}
+            <h4 class="pricetag">Price:{{price}}</h4>
+            {{/if}}    
+            <button onclick="addtobag('{{name}}', '{{price}}')" class="addtocart">Add to bag</button>
+            <button onclick="viewproduct('{{name}}', '{{price}}', '{{image}}', '{{sale}}', '{{oldprice}}')" class="viewproduct">View</button>
         </div>
-        <div id="product2" onmouseover="popup(this)" onmouseout="hidepopup(this)" class="productsitem">
-          <img src="img/mountainproduct1(1).webp" alt="mountain" class="productimage">
         </div>
-        <div id="product3" onmouseover="popup(this)" onmouseout="hidepopup(this)" class="productsitem">
-          <img src="img/mountainproduct1(1).webp" alt="mountain" class="productimage">
-        </div>
-        <div id="product4" onmouseover="popup(this)" onmouseout="hidepopup(this)" class="productsitem">
-          <img src="img/mountainproduct1(1).webp" alt="mountain" class="productimage">
-        </div>
-        <div id="product5" onmouseover="popup(this)" onmouseout="hidepopup(this)" class="productsitem">
-          <img src="img/mountainproduct1(1).webp" alt="mountain" class="productimage">
-        </div>
-        <div id="product6" onmouseover="popup(this)" onmouseout="hidepopup(this)" class="productsitem">
-          <img src="img/mountainproduct1(1).webp" alt="mountain" class="productimage">
-        </div>
-        <div id="product7" onmouseover="popup(this)" onmouseout="hidepopup(this)" class="productsitem">
-          <img src="img/mountainproduct1(1).webp" alt="mountain" class="productimage">
-        </div>
-        <div id="product8" onmouseover="popup(this)" onmouseout="hidepopup(this)" class="productsitem">
-          <img src="img/mountainproduct1(1).webp" alt="mountain" class="productimage">
-        </div>
-      </div>
-  </div>
-  </section>
-  <footer>
-    <!--Copyright (c) 2019 Copyright Holder All Rights Reserved.-->
-  </footer>
-  </div>
-</body>
+</script>
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+    <script src="js/javascript.js"></script>
 
 </html>

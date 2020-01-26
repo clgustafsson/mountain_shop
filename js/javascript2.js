@@ -5,6 +5,10 @@ var sale = sessionStorage.sale
 var oldprice = sessionStorage.oldprice
 var myBag = JSON.parse(sessionStorage.myBag);
 
+function freeshipping(x) {
+    document.getElementById("freeshipping").style.display = x;
+}
+
 function addtobag() {
     var found = false;
     myBag.forEach(function (item) {

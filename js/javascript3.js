@@ -1,5 +1,9 @@
 var myBag = JSON.parse(sessionStorage.myBag);
 
+function freeshipping(x) {
+    document.getElementById("freeshipping").style.display = x;
+}
+
 function totalinfo() {
     var totalprice = 0;
     var totalamount = 0;

@@ -8,8 +8,8 @@ function totalinfo() {
     var totalprice = 0;
     var totalamount = 0;
     myBag.forEach(function (item) {
-        totalprice = totalprice + item[3];
-        totalamount = totalamount + item[1];
+        totalprice = parseInt(totalprice) + parseInt(item[3]);
+        totalamount = parseInt(totalamount) + parseInt(item[1]);
     });
     document.getElementById("totalamount").innerHTML = "Total amount of products:" + totalamount;
     document.getElementById("totalprice").innerHTML = "Total price:" + totalprice;

@@ -1,6 +1,6 @@
 var myBag = [];
 
-var items = [{ //name: has to be unique. //product image -> css/"name:".webp
+var items = [{ //name: has to be unique. /product image -> css/"name:".webp
         price: 20,
         name: "Product1",
         sale: false,

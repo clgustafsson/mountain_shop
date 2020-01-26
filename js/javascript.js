@@ -1,4 +1,8 @@
-var myBag = JSON.parse(sessionStorage.myBag);
+var myBag = [];
+if (sessionStorage.myBag != null) {
+    var myBag = JSON.parse(sessionStorage.myBag);
+}
+
 
 var items = [{ //name: has to be unique. //product image -> css/"name:".webp
         price: 20,

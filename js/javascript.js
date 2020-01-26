@@ -35,6 +35,10 @@ var items = [{ //name: has to be unique. //product image -> css/"name:".webp
 
 ];
 
+function freeshipping(x) {
+    document.getElementById("freeshipping").style.display = x;
+}
+
 function addtobag(target, productprice) {
     var found = false;
     myBag.forEach(function (item) {

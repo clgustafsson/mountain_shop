@@ -26,6 +26,30 @@ button:hover {
     color: #FFF;
 }
 
+#freeshipping {
+    background-color: white;
+    position: absolute;
+    z-index: 2;
+    padding: 2px;
+    border: 2px solid #131f34;
+    top: 3em;
+    left: 50%;
+    transform: translate(-50%);
+    display: none;
+}
+
+#freeshipping button {
+    float: right;
+    background-color: red;
+    height: 2em;
+    width: 2em;
+}
+
+#freeshippingdisclaimer,
+#storedisclaimer {
+    font-size: 8px;
+}
+
 /*Nav*/
 nav>ul,
 #mainpagefooter ul {
@@ -297,6 +321,10 @@ input {
 
     #shoppingcart {
         margin-top: 10em;
+    }
+
+    #freeshipping {
+        top: 10em;
     }
 
 }

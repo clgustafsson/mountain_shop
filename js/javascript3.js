@@ -22,6 +22,7 @@ function addtobag(target, productprice) {
 
     myBag.forEach(function (item) {
         var amount = Math.abs(document.getElementById("inputamount" + item[0]).value);
+        document.getElementById("inputamount" + item[0]).value = amount;
         if (item[0] == target) {
             item[1] = parseInt(amount);
             item[3] = parseInt(item[1]) * parseInt(productprice);

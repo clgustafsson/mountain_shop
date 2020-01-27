@@ -2,11 +2,11 @@ var name = "Product1";
 var price = 0;
 var sale = false;
 var oldprice = 0;
-if (sessionStorage.name != null) {
-    var name = sessionStorage.name
-    var price = sessionStorage.price
-    var sale = sessionStorage.sale
-    var oldprice = sessionStorage.oldprice
+if (sessionStorage["name"] != null) {
+    var name = sessionStorage.name;
+    var price = sessionStorage.price;
+    var sale = sessionStorage.sale;
+    var oldprice = sessionStorage.oldprice;
 }
 var myBag = [];
 if (sessionStorage.myBag != null) {

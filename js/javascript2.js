@@ -1,4 +1,4 @@
-var name = Product;
+var name = Product1;
 var price = 0;
 var sale = false;
 var oldprice = 0;

@@ -3,7 +3,10 @@ var price = sessionStorage.price
 var image = sessionStorage.image
 var sale = sessionStorage.sale
 var oldprice = sessionStorage.oldprice
-var myBag = JSON.parse(sessionStorage.myBag);
+var myBag = [];
+if (sessionStorage.myBag != null) {
+    var myBag = JSON.parse(sessionStorage.myBag);
+}
 
 function freeshipping(x) {
     document.getElementById("freeshipping").style.display = x;

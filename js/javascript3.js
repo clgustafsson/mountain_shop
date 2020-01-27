@@ -1,4 +1,7 @@
-var myBag = JSON.parse(sessionStorage.myBag);
+var myBag = [];
+if (sessionStorage.myBag != null) {
+    var myBag = JSON.parse(sessionStorage.myBag);
+}
 
 function freeshipping(x) {
     document.getElementById("freeshipping").style.display = x;

@@ -1,8 +1,13 @@
-var name = sessionStorage.name
-var price = sessionStorage.price
-var image = sessionStorage.image
-var sale = sessionStorage.sale
-var oldprice = sessionStorage.oldprice
+var name = Product;
+var price = 0;
+var sale = false;
+var oldprice = 0;
+if (sessionStorage.name != null) {
+    var name = sessionStorage.name
+    var price = sessionStorage.price
+    var sale = sessionStorage.sale
+    var oldprice = sessionStorage.oldprice
+}
 var myBag = [];
 if (sessionStorage.myBag != null) {
     var myBag = JSON.parse(sessionStorage.myBag);

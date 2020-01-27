@@ -53,11 +53,10 @@ function addtobag(target, productprice) {
     sessionStorage.myBag = JSON.stringify(myBag);
 }
 
-function viewproduct(name, price, image, sale, oldprice) {
+function viewproduct(name, price, sale, oldprice) {
     window.open("index2.html", "_self");
     sessionStorage.name = name;
     sessionStorage.price = price;
-    sessionStorage.image = image;
     sessionStorage.sale = sale;
     sessionStorage.oldprice = oldprice;
     sessionStorage.myBag = JSON.stringify(myBag);

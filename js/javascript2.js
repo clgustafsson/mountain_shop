@@ -17,7 +17,7 @@ if (sessionStorage.shoppingcartamount != null) {
 }
 var myCart = [];
 if (sessionStorage.myCart != null) {
-    var myCart = JSON.parse(sessionStorage.myCart);
+    myCart = JSON.parse(sessionStorage.myCart);
 }
 
 function freeshipping(x) { //toggles free shipping popup

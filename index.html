@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="Description"
         content="The brand new collection of mountains is best in class! Buy your dream mountain here!">
-    <title>Products</title>
+    <title>New collection finally out - Limited offers! - Products - Mountain Shop</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -17,9 +17,10 @@
             <li><a href="index.html">Home</a></li>
             <li><a onclick="freeshipping('block')">Free shipping*</a></li>
             <li id="FAQ"><a href="">FAQ</a></li>
-            <li id="shoppingbag"><a href="index3.html">Shoppingbag</a></li>
+            <li><a href="index3.html" id="shoppingcartnav">Shoppingcart (0)</a></li>
         </ul>
     </nav>
+    <!-- Free shipping popup -->
     <div id="freeshipping">
         <button onclick="freeshipping('none')">X</button>
         <h2>Free shipping on all orders*</h2>
@@ -29,21 +30,24 @@
         <p id="storedisclaimer">*We do not have a store</p>
     </div>
     <header>
-        <img src="img/mountain.webp" alt="mountain">
-        <h1>Website name</h1>
+        <img src="img/mountain.webp" alt="mountain" onerror="this.onerror=null;this.src='img/mountain.jpg'">
+        <h1>Mountain Shop</h1>
     </header>
-    <section class="products" id="products"></section>
-    <p id="enablejavascript">Not loading? Please enable javascript</p>
-    <footer id="mainpagefooter">
+    <section class="products" id="products">
+        <p id="enablejavascript">Not loading? Please enable javascript</p>
+    </section>
+    <footer class="pagefooter">
         <ul>
+            <li><a href="#">Back to top</a></li>
             <li><a href="">Contact</a></li>
             <li><a href="">About</a></li>
         </ul>
     </footer>
 </body>
+<!-- Template for handlebars, will be inserted in section once for every item in array "items" js/javascript.js -->
 <script id="product-template" type="text/x-handlebars-template">
-    <div id="{{name}}" class="product" onmouseover="showinfo('{{name}}')" onmouseout="hideinfo('{{name}}')">
-            <img src="img/{{name}}.webp" alt="{{name}}image">
+    <div id="{{name}}" class="product" onmouseover="showinfo('{{name}}', 'grid')" onmouseout="showinfo('{{name}}', 'none')">
+            <img src="img/{{name}}.webp" alt="{{name}}image" onerror="this.onerror=null;this.src='img/{{name}}.png'">
             <h3 class="saletag nosaletag{{saletag}}">{{saletag}}</h3>
             <div id="productinfo{{name}}" class="productinfo">
             <h4 class="productname">{{name}}</h4>
@@ -52,10 +56,10 @@
             {{else}}
             <h4 class="pricetag">Price:{{price}}</h4>
             {{/if}}    
-            <button onclick="addtobag('{{name}}', '{{price}}')" class="addtocart">Add to bag</button>
-            <button onclick="viewproduct('{{name}}', '{{price}}', '{{sale}}', '{{oldprice}}')" class="viewproduct">View</button>
+            <button onclick="addtocart('{{name}}', '{{price}}')" class="addtocart">Add to bag</button>
+            <button onclick="viewproduct('{{name}}', '{{price}}', '{{sale}}', '{{oldprice}}', '{{description}}')" class="viewproduct">View</button>
         </div>
-        </div>
+    </div>
 </script>
 <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
 <script src="js/javascript.js"></script>

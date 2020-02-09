@@ -52,7 +52,7 @@ button:hover {
 
 /*Nav*/
 nav>ul,
-#mainpagefooter ul {
+.pagefooter ul {
     position: absolute;
     list-style-type: none;
     margin: 0;
@@ -63,18 +63,18 @@ nav>ul,
     top: 0;
 }
 
-#mainpagefooter ul {
+.pagefooter ul {
     position: relative;
 }
 
 nav li,
-#mainpagefooter li {
+.pagefooter li {
     float: left;
     width: 25vw;
 }
 
 nav li a,
-#mainpagefooter li a {
+.pagefooter li a {
     display: block;
     color: white;
     text-align: center;
@@ -83,7 +83,7 @@ nav li a,
 }
 
 nav li a:hover,
-#mainpagefooter li a:hover {
+.pagefooter li a:hover {
     background-color: #111;
 }
 
@@ -119,7 +119,10 @@ header>h1 {
 
 .product:hover {
     transform: scale(1.02);
-    transition: transform 0.01s;
+    -webkit-transition: transform 10ms linear;
+    -ms-transition: transform 10ms linear;
+    -o-transition: transform 10ms linear;
+    transition: transform 10ms linear;
     z-index: 1;
 }
 
@@ -166,7 +169,7 @@ header>h1 {
     width: 100%;
     background-color: #131f34;
     display: none;
-    z-index: 20;
+    z-index: 2;
     padding-bottom: 7px;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, auto);
@@ -298,7 +301,9 @@ input {
 
 /*Media query*/
 @media screen and (max-width: 787px) {
-    nav li {
+
+    nav li,
+    .pagefooter li {
         width: 100vw;
     }
 

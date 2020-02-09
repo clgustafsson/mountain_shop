@@ -6,52 +6,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="Description" content="Best mountains in class.">
-    <title>Product name</title>
+    <title>Productpage - Mountain Shop</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <div class="container">
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a onclick="freeshipping('block')">Free shipping*</a></li>
-                <li id="FAQ"><a href="">FAQ</a></li>
-                <li id="shoppingbag"><a href="index3.html">Shoppingbag</a></li>
-            </ul>
-        </nav>
-        <div id="freeshipping">
-            <button onclick="freeshipping('none')">X</button>
-            <h2>Free shipping on all orders*</h2>
-            <h3>We are happy to inform that we will ship you to the desired product without any additional costs*</h3>
-            <p id="freeshippingdisclaimer">*Free shipping is only available in our store* not on online orders. There is
-                a
-                hidden shipping fee on all online orders</p>
-            <p id="storedisclaimer">*We do not have a store</p>
-        </div>
-        <section>
-            <div id="productpage">
-                <div>
-                    <img id="productimage" src="" alt="mountain" class="column">
-                    <div class="column">
-                        <h3 id="productname">Product Name</h3>
-                        <h3 id="productprice">Price:0</h3>
-                        <button class="productaddtocart" type="button" onclick="addtobag()">Add to
-                            bag</button>
-                        <h2>Description</h2>
-                        <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic repellendus eius earum
-                            voluptatem quibusdam! Vel, soluta optio explicabo veniam corporis nostrum assumenda eum
-                            aspernatur sapiente excepturi, odit voluptatum. Nesciunt, consectetur.</h3>
-                    </div>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a onclick="freeshipping('block')">Free shipping*</a></li>
+            <li id="FAQ"><a href="">FAQ</a></li>
+            <li><a href="index3.html" id="shoppingcartnav">Shoppingcart (0)</a></li>
+        </ul>
+    </nav>
+    <!-- Free shipping popup -->
+    <div id="freeshipping">
+        <button onclick="freeshipping('none')">X</button>
+        <h2>Free shipping on all orders*</h2>
+        <h3>We are happy to inform that we will ship you to the desired product without any additional costs*</h3>
+        <p id="freeshippingdisclaimer">*Free shipping is only available in our store* not on online orders. There is a
+            hidden shipping fee on all online orders</p>
+        <p id="storedisclaimer">*We do not have a store</p>
+    </div>
+    <section>
+        <div id="productpage">
+            <div>
+                <img id="productimage" src="" alt="productimage" class="column">
+                <div class=" column">
+                    <h3 id="productname">Product Name</h3>
+                    <h3 id="productprice">Price:0</h3>
+                    <button class="productaddtocart" type="button" onclick="addtocart()">Add to
+                        bag</button>
+                    <h2>Description</h2>
+                    <h3 id="descriptiontext">Product Description</h3>
                 </div>
             </div>
-    </div>
+        </div>
+        </div>
     </section>
     <footer>
-        <!--Copyright (c) 2019 Copyright Holder All Rights Reserved.-->
     </footer>
-    </div>
 </body>
+
 <script src="js/javascript2.js"></script>
 
 </html>

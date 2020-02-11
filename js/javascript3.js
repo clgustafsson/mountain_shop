@@ -22,7 +22,6 @@ function totalinfo() { //updates the shoppingcarts totalamount and totalprize
 }
 
 function addtocart(target, productprice) { //adding / removing products via input
-    var isFocused = (document.activeElement === document.getElementById("inputamountProduct1"));
     myCart.forEach(function (item, index) {
         var amount = Math.abs(document.getElementById("inputamount" + item[0]).value); //preventing a negative amount of products by taking the absolute value
         document.getElementById("inputamount" + item[0]).value = amount;

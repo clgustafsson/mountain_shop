@@ -22,6 +22,7 @@ function totalinfo() { //updates the shoppingcarts totalamount and totalprize
 }
 
 function addtocart(target, productprice) { //adding / removing products via input
+    var isFocused = (document.activeElement === document.getElementById("inputamountProduct1"));
     myCart.forEach(function (item, index) {
         var amount = Math.abs(document.getElementById("inputamount" + item[0]).value); //preventing a negative amount of products by taking the absolute value
         document.getElementById("inputamount" + item[0]).value = amount;
@@ -29,7 +30,8 @@ function addtocart(target, productprice) { //adding / removing products via inpu
             item[1] = parseInt(amount);
             item[3] = parseInt(item[1]) * parseInt(productprice);
             document.getElementById("price" + item[0]).innerHTML = item[3];
-            if (amount < 1) { //removing item from cart if amount is 0 or negative
+            var isFocused = (document.activeElement === document.getElementById("inputamount" + item[0]));
+            if (amount < 1 && isFocused == false) { //removing item from cart if amount is 0 or negative and input does not have focus
                 document.getElementById(target).style.display = "none";
                 myCart.splice(index, 1);
             }
@@ -44,7 +46,6 @@ function addtocart(target, productprice) { //adding / removing products via inpu
     sessionStorage.shoppingcartamount = shoppingcartamount;
     sessionStorage.myCart = JSON.stringify(myCart);
 }
-
 
 function loadpage() { //generating the html code using handlebars
     template = document.getElementById("product-template").innerHTML;
